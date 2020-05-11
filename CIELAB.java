@@ -3,25 +3,24 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 // Remember that the class name should be "Main" and should be "public".
-class FCTRL {
+class CIELAB {
     public static void main(String[] args) throws Exception {
         // System.in and System.out are input and output streams, respectively.
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter out = new PrintWriter(System.out);
         // Read the number of test cases.
-        int t = Integer.parseInt(br.readLine());
-        while (t-- > 0) {
-            int input = Integer.parseInt(br.readLine());
-            int temp = input;
-            int mul = 5;
-            int zeros = 0;
-            while (mul <= temp) {
-                zeros += temp / mul;
-                mul *= 5;
-            }
-            out.println(zeros);
-            out.flush();
+        String[] line = br.readLine().split(" ");
+        int[] input = new int[line.length];
+        for (int i = 0; i < 2; i++) {
+            input[i] = Integer.parseInt(line[i]);
         }
+        int diff = input[0] - input[1];
+        if (diff % 10 == 9) {
+            out.println(diff - 1);
+        } else {
+            out.println(diff + 1);
+        }
+        out.flush();
         out.close();
     }
 }
