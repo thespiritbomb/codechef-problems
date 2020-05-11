@@ -3,7 +3,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 // Remember that the class name should be "Main" and should be "public".
-class FLOW001 {
+class REMISS {
     public static void main(String[] args) throws Exception {
         // System.in and System.out are input and output streams, respectively.
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -16,6 +16,7 @@ class FLOW001 {
             for (int i = 0; i < 2; i++) {
                 input[i] = Integer.parseInt(line[i]);
             }
+            out.print(Math.max(input[0], input[1]) + " ");
             out.println(input[0] + input[1]);
             out.flush();
         }
