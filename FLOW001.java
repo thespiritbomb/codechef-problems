@@ -3,7 +3,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 // Remember that the class name should be "Main" and should be "public".
-public class FLOW001 {
+class FLOW001 {
     public static void main(String[] args) throws Exception {
         // System.in and System.out are input and output streams, respectively.
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
